@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-// import Search from "@/components/Search";
-// import FileUploader from "@/components/FileUploader";
+import Search from "@/components/Search";
+import FileUploader from "@/components/FileUploader";
 import { signOutUser } from "@/lib/actions/user.actions";
 
 const Header = ({
@@ -14,10 +14,10 @@ const Header = ({
 }) => {
   return (
     <header className="header flex ">
-      {/* <Search /> */}
+      <Search />
         <div></div>
       <div className="header-wrapper">
-        {/* <FileUploader ownerId={userId} accountId={accountId} /> */}
+        <FileUploader ownerId={userId} accountId={accountId} />
         <form
           action={async () => {
             "use server";
